@@ -11,6 +11,8 @@ checkButton.onclick = function(element) {
     chrome.runtime.onMessage.addListener(async function (message) {
         if (message === null) {
              alert("\u26A0 No password detected!");
+        } else if (message === "short") {
+             alert("\u26A0 Your password is too short!");
         } else {
             try {
                 let found = false;
