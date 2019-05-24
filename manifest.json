@@ -21,14 +21,14 @@
         "16": "images/lock-16.png",
         "32": "images/lock-32.png",
         "48": "images/lock-48.png",
-        "100": "images/lock-100.png"
+        "128": "images/lock-128.png"
       }
     },
     "icons": {
       "16": "images/lock-16.png",
       "32": "images/lock-32.png",
       "48": "images/lock-48.png",
-      "100": "images/lock-100.png"
+      "128": "images/lock-128.png"
     },
     "manifest_version": 2
 }
