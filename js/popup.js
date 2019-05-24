@@ -18,17 +18,16 @@ checkButton.onclick = function(element) {
                 let found = false;
 
                 const hash =  hexString(await digestMessage(message));
-                const firstPartialHash = hash.substring(0, 5);
-                const secondPartialHash = hash.substring(5, hash.length);
+                const partialHash = hash.substring(5, hash.length);
 
-                const response = await fetch(`https://api.pwnedpasswords.com/range/${ firstPartialHash }`);
+                const response = await fetch(`https://api.pwnedpasswords.com/range/${ hash.substring(0, 5) }`);
                 const data = await response.text()
                 const result = data.split('\n');
 
                 for (let i = 0; i < result.length; i++) {
                     const [resultHash, resultAppearanceCount] = [...result[i].split(':')];
 
-                    if (resultHash.toLowerCase() === secondPartialHash.toLowerCase() ) {
+                    if (resultHash.toLowerCase() === partialHash.toLowerCase() ) {
                         alert(`\u2620 Oh no, your password is not secure! It has already been seen ${ formatNumber(resultAppearanceCount.trim()) } times.\n\nThis password has previously appeared in a data breach and should never be used. If you've ever used it anywhere before, change it now!`)
                         found = true;
 
