@@ -10,11 +10,6 @@
       "scripts": ["js/background.js"],
       "persistent": false
     },
-    "content_scripts": [{
-        "matches": ["http://*/*", "https://*/*"],
-        "all_frames": true,
-        "js": ["js/content.js"]
-    }],
     "page_action": {
       "default_popup": "popup.html",
       "default_icon": {
