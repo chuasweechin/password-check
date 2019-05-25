@@ -1,18 +1,32 @@
 body {
-	font-size: 14px;
+	font-size: 12px;
+}
+
+h3 {
+	margin-bottom: 6px;
+}
+
+p {
+	margin: 0px 0px 6px 0px;
 }
 
 #checkButton {
-    border: 0px;
-    height: 30px;
-    width: 300px;
-    color: white;
-    border-radius: 5px;
-    background-color: #0DA2B7;
-    transition-duration: 0.4s;
+  border: 0px;
+  height: 25px;
+  width: 300px;
+  color: white;
+  font-size: 12px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: #0DA2B7;
+  transition-duration: 0.4s;
 }
 
 #checkButton:hover{
-		cursor: pointer;
-    background-color: #286787;
+	cursor: pointer;
+  background-color: #286787;
+}
+
+#credit {
+	font-size: 10px;
 }
