@@ -1,6 +1,12 @@
 (
     function () {
-        let pwElement = document.querySelector("input[type='password']");
+        let pwElement = null
+
+        if (window.frames[0] === undefined) {
+            pwElement = document.querySelector("input[type='password']");
+        } else {
+            pwElement = window.frames[0].document.querySelector("input[type='password']");
+        }
 
         if (pwElement === null) {
             chrome.runtime.sendMessage(null);
