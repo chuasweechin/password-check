@@ -2,7 +2,7 @@ const checkButton = document.getElementById('checkButton');
 
 chrome.runtime.onMessage.addListener(async function (message) {
     if (message === "empty") {
-         alert("\u26A0  There are no available password to check.");
+         alert("\u26A0  There are no available password to check. Please fill in your password on the web page.");
     } else if (message === "short") {
          alert("\u26A0  Your password is too short.");
     } else if (message === "error") {

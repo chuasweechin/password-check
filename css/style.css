@@ -1,21 +1,22 @@
 body {
-	font-size: 12px;
+	font-size: 15px;
 }
 
 h3 {
+	margin-top: 3px;
 	margin-bottom: 6px;
 }
 
-p {
+#content {
 	margin: 0px 0px 6px 0px;
 }
 
 #checkButton {
   border: 0px;
   height: 25px;
-  width: 300px;
+  width: 350px;
   color: white;
-  font-size: 12px;
+  font-size: 15px;
   border-radius: 5px;
   margin-bottom: 10px;
   background-color: #0DA2B7;
