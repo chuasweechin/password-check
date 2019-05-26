@@ -1,11 +1,14 @@
 const checkButton = document.getElementById('checkButton');
 
 chrome.runtime.onMessage.addListener(async function (message) {
-    if (message === null) {
-         alert("\u26A0  There is no password to check!");
+    if (message === "empty") {
+         alert("\u26A0  There are no available password to check.");
     } else if (message === "short") {
-         alert("\u26A0  Your password is too short!");
-    } else {
+         alert("\u26A0  Your password is too short.");
+    } else if (message === "error") {
+         alert("\u26A0  This extension has been blocked by the web page.");
+    }
+    else {
         try {
             let found = false;
 
@@ -28,10 +31,10 @@ chrome.runtime.onMessage.addListener(async function (message) {
             }
 
             if (found === false) {
-                alert(`\u2714 Good news, your password is safe!`)
+                alert(`\u2714 Good news! Your password is safe.`)
             }
-        } catch (e) {
-            console.log("An error occur");
+        } catch {
+            alert("\u26A0  An error has occur with the extension. Please try again later.");
         }
 
     }
