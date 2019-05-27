@@ -36,7 +36,7 @@ function checkForValidPasswordField (elements) {
             }
 
         } catch {
-            chrome.runtime.sendMessage("error");
+            alert("\u26A0  This extension has been blocked by the website.");
         }
     }
 )();

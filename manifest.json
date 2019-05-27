@@ -1,6 +1,6 @@
 {
     "name": "Password Check",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "description": "Password Check",
     "permissions": [
     	"activeTab",
